@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { counterContext } from './App';
 
 const ComponentB = () => {
+    const countContext=useContext(counterContext);
     return (
         <div>
             <p>Component A</p>

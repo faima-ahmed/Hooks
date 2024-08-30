@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react';
 import ComponentA from './ComponentA';
 
-const counterContext= React.createContext();
+export const counterContext= React.createContext();
 const initialState = 5;
 const reducer = (state, action) => {
   switch (action) {
@@ -20,7 +20,10 @@ const App = () => {
   return (
     <div className='app'>
       <div>Count: {count}</div>
+      <counterContext.Provider value={{countDispatch:dispatch}}>
       <ComponentA/>
+      </counterContext.Provider>
+      
     </div>
   );
 };
