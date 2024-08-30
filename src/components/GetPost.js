@@ -18,11 +18,12 @@ useEffect(()=>{
       setLoading(false);
       setPost({});
       setError('There was a problem');
-    })
+    });
 },[]);
     return (
         <div>
-            
+            {loading? 'Loading...' : post.title}
+            {error || null}
         </div>
     );
 };
