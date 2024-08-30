@@ -1,6 +1,7 @@
 import React, { useReducer } from 'react';
-import CounterThree from './components/Hooks/UseReducer/CounterThree';
+import ComponentA from './ComponentA';
 
+const counterContext= React.createContext();
 const initialState = 5;
 const reducer = (state, action) => {
   switch (action) {
@@ -19,7 +20,7 @@ const App = () => {
   return (
     <div className='app'>
       <div>Count: {count}</div>
-      <CounterThree/>
+      <ComponentA/>
     </div>
   );
 };

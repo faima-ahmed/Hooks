@@ -1,15 +1,10 @@
 import React from "react";
+import ComponentB from "./ComponentB";
 
 const ComponentA = () => {
   return (
     <div>
-        <p>Component A</p>
-      <button type="button" onClick={() => dispatch("increment")}>
-        Increment
-      </button>
-      <button type="button" onClick={() => dispatch("decrement")}>
-        Decrement
-      </button>
+        <ComponentB/>
     </div>
   );
 };
