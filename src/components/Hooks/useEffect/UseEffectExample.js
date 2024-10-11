@@ -12,7 +12,7 @@ useEffect(() =>{
 })
     return (
         <div>
-            {conso}
+            {console.log('rendering')}
             <h1>Count:{count}</h1>
             <button onClick={()=>{setCount((count)=> count+1)}}>+</button>
         </div>
