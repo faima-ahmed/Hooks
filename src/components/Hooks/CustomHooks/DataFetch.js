@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import useFetch from './useFetch';
 
 function DataFetch(props) {
-    
+    const [data, setData]= useFetch("https://jsonplaceholder.typicode.com/todos")
 
     const loadingMessage= <p>todos is loading</p>
     const errorMessage= <p>{error}</p>

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
-const useFetch = () => {
-    const [todos, setTodos] = useState(null);
+const useFetch = (url) => {
+    const [data, setData] = useState(null);
     const [isloading, setIsLoading]=useState(true);
     const [error, setError]= useState(false);
 
     useEffect(()=>{
-        fetch("https://jsonplaceholder.typicode.com/todos")
+        fetch(url)
         .then((res) => {
             if (!res.ok){
                 throw Error('fetching is not successful');
@@ -16,7 +16,7 @@ const useFetch = () => {
            }
         })
         .then((data) => {
-            setTodos(data);
+            setData(data);
             setIsLoading(false);
             setError(null);
         })
@@ -24,7 +24,9 @@ const useFetch = () => {
             setError(error.message)
             setIsLoading(false);
         })
-    }, [])
+    }, [url])
+
+    return {data, isloading, error}
 };
 
 export default useFetch;
