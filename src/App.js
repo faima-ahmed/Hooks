@@ -1,5 +1,5 @@
-import CounterThree from "./components/CounterThree";
-import UseEffectExample from "./Hooks/useEffect/UseEffectExample";
+import UseEffectExample from "./components/Hooks/useEffect/UseEffectExample";
+
 export default function App() {
   return (
     <div className='App'>
