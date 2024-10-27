@@ -7,9 +7,9 @@ function UseEffectExample(props) {
 //     setCount((count)=> count+1);
 // }
 
-useEffect(() =>{
+useEffect(() => {
     console.log('useEffect');
-})
+},[]);
     return (
         <div>
             {console.log('rendering')}
