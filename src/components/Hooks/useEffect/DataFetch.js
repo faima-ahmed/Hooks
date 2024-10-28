@@ -5,14 +5,14 @@ function DataFetch(props) {
 
     useEffect(()=>{
         fetch('https://jsonplaceholder.typicode.com/todos')
-        .then((res)=>{
+        .then((res) => {
             return res.json();
         })
-        .then((data)=>{
+        .then((data) => {
             setTodos(data);
             console.log(todos);
-        }, []);
-    })
+        });
+    }, [])
     return (
         <div>
             <h1>DataFetch</h1>
