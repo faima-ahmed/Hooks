@@ -4,7 +4,7 @@ function DataFetch(props) {
     const [todos, setTodos] = useState(null);
 
     useEffect(()=>{
-        fetch('https://jsonplaceholder.typicode.com/todos')
+        fetch("https://jsonplaceholder.typicode.com/todos")
         .then((res) => {
             return res.json();
         })
