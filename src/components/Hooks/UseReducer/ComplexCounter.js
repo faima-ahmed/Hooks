@@ -1,27 +1,49 @@
-import React, { useReducer } from 'react';
+import { type } from "@testing-library/user-event/dist/type";
+import React, { useReducer } from "react";
 
-const initialState={
-    counter:0,
+const initialState = {
+  counter: 0,
 };
-const reducer= (state, action) =>{
-    switch(action){
-        case 'increment':
-            return state+1;
-        case 'decrement':
-            return state-1;
-        default:
-            return state;
-    }
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "increment":
+      return { counter: state.counter + action.value };
+    case "decrement":
+      return { counter: state.counter - action.value };
+    default:
+      return state;
+  }
 };
 const Counter = () => {
-    const[count, dispatch]= useReducer(reducer, initialState);
-    return (
-        <div>
-            <div>Count - {count.counter}</div>
-            <button type='button' onClick={()=>dispatch('increment')}>Increment</button>
-            <button type='button'onClick={()=>dispatch('decrement')}>Decrement</button>
-        </div>
-    );
+  const [count, dispatch] = useReducer(reducer, initialState);
+  return (
+    <div>
+      <div>Count - {count.counter}</div>
+      <button
+        type="button"
+        onClick={() =>
+          dispatch({
+            type: "increment",
+            value: 1,
+          })
+        }
+      >
+        Increment by 1
+      </button>
+
+      <button
+        type="button"
+        onClick={() =>
+          dispatch({
+            type: "decrement",
+            value: 1,
+          })
+        }
+      >
+        Decrement by 1
+      </button>
+    </div>
+  );
 };
 
 export default Counter;

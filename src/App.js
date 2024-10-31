@@ -1,10 +1,10 @@
 import React from 'react';
-import UseReducer from './components/Hooks/UseReducer/Counter';
+import ComplexCounter from './components/Hooks/UseReducer/ComplexCounter';
 
 const App = () => {
   return (
     <>
-      <UseReducer/>
+      <ComplexCounter/>
     </>
   );
 };
