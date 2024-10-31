@@ -7,15 +7,17 @@ function DataFetch(props) {
     const [isloading, setIsLoading]=useState(true);
 
     useEffect(()=>{
-        fetch("https://jsonplaceholder.typicode.com/todos")
-        .then((res) => {
-            return res.json();
-        })
-        .then((data) => {
-            setTodos(data);
-            setIsLoading(false);
-            console.log(todos);
-        });
+        setTimeout(()=>{
+            fetch("https://jsonplaceholder.typicode.com/todos")
+            .then((res) => {
+                return res.json();
+            })
+            .then((data) => {
+                setTodos(data);
+                setIsLoading(false);
+                
+            });
+        }, 2000)
     }, [])
 
     const todosElement=todos && todos.map((todo)=>{
