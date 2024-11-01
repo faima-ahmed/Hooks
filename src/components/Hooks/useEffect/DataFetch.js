@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 function DataFetch(props) {
     const [todos, setTodos] = useState(null);
+    const [isloading, setIsLoading]=useState(true);
 
     useEffect(()=>{
         fetch("https://jsonplaceholder.typicode.com/todos")
@@ -10,6 +11,7 @@ function DataFetch(props) {
         })
         .then((data) => {
             setTodos(data);
+            setIsLoading(false);
             console.log(todos);
         });
     }, [])
@@ -21,6 +23,7 @@ function DataFetch(props) {
         <div>
             <h1>Todos</h1>
             {todosElement}
+            
         </div>
     );
 }
