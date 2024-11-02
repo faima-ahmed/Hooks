@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
+const loadingMessage= <p>todos is loading</p>
+
 function DataFetch(props) {
     const [todos, setTodos] = useState(null);
     const [isloading, setIsLoading]=useState(true);
@@ -23,7 +25,7 @@ function DataFetch(props) {
         <div>
             <h1>Todos</h1>
             {todosElement}
-            
+            {isloading && loadingMessage}
         </div>
     );
 }
