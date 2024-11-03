@@ -15,7 +15,7 @@ function DataFetch(props) {
     }, [])
     return (
         <div>
-            <h1>DataFetch</h1>
+            <h1>Todos</h1>
         </div>
     );
 }
