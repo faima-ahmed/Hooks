@@ -16,6 +16,9 @@ function DataFetch(props) {
     return (
         <div>
             <h1>Todos</h1>
+            {todos.map((todo)=>{
+               return <p>{todo.title}</p>
+            })}
         </div>
     );
 }
