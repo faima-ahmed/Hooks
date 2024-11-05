@@ -16,8 +16,8 @@ function DataFetch(props) {
     return (
         <div>
             <h1>Todos</h1>
-            {todos.map((todo)=>{
-               return <p>{todo.title}</p>
+            {todos && todos.map((todo)=>{
+               return <p key={todo.id}>{todo.title}</p>
             })}
         </div>
     );
