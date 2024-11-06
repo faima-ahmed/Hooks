@@ -13,12 +13,14 @@ function DataFetch(props) {
             console.log(todos);
         });
     }, [])
+
+    const todosElement=todos && todos.map((todo)=>{
+        return <p key={todo.id}>{todo.title}</p>
+     })
     return (
         <div>
             <h1>Todos</h1>
-            {todos && todos.map((todo)=>{
-               return <p key={todo.id}>{todo.title}</p>
-            })}
+            {todosElement}
         </div>
     );
 }
