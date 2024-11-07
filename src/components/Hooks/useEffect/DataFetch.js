@@ -5,6 +5,7 @@ const loadingMessage= <p>todos is loading</p>
 function DataFetch(props) {
     const [todos, setTodos] = useState(null);
     const [isloading, setIsLoading]=useState(true);
+    const [error, setError]= useState(false);
 
     useEffect(()=>{
         setTimeout(()=>{
