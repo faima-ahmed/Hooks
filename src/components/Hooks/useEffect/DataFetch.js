@@ -17,7 +17,10 @@ function DataFetch(props) {
                 setTodos(data);
                 setIsLoading(false);
                 
-            });
+            })
+            .catch((error) =>{
+                isloading(error.message)
+            })
         }, 2000)
     }, [])
 
