@@ -1,11 +1,10 @@
-import DataFetch from "./components/Hooks/useEffect/DataFetch";
-
+import MyComponent from "./components/MyComponent";
 
 export default function App() {
   return (
     <div className='App'>
       <div>
-       <DataFetch/>
+       <MyComponent/>
       </div>
     </div>
   );
