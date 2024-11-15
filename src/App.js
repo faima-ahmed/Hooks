@@ -1,10 +1,10 @@
-import MyComponent from "./components/MyComponent";
+import UseForm from "./components/UseForm";
 
 export default function App() {
   return (
     <div className='App'>
       <div>
-       <MyComponent/>
+       <UseForm/>
       </div>
     </div>
   );
