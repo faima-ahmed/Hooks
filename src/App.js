@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Title from "./components/Title";
+import ShowCount from "./components/ShowCount";
+import Button from "./components/Button";
 
 export default function App() {
   const [count1, setCount1]= useState(0);
@@ -16,7 +18,8 @@ export default function App() {
   return (
     <div className='App'>
       <Title/>
-      
+      <ShowCount count={count1} title='Counter 1'/>
+      <Button handleClick={incrementByOne}>Increment by one</Button>
     </div>
   );
 }
