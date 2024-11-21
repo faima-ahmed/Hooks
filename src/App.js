@@ -20,6 +20,9 @@ export default function App() {
       <Title/>
       <ShowCount count={count1} title='Counter 1'/>
       <Button handleClick={incrementByOne}>Increment by one</Button>
+
+      <ShowCount count={count2} title='Counter 2'/>
+      <Button handleClick={incrementByFive}>Increment by five</Button>
     </div>
   );
 }
