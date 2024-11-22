@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 
-const ShowCount = ({count, title}) => {
-    console.log(`rendering ${title}....`);
-    return (
-        <p>
-            {title} is {count}
-        </p>
-    );
+const ShowCount = ({ count, title }) => {
+  console.log(`rendering ${title}....`);
+  return (
+    <p>
+      {title} is {count}
+    </p>
+  );
 };
 
-export default ShowCount;
+export default React.memo(ShowCount);
