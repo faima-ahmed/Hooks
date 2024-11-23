@@ -1,8 +1,19 @@
-import { useCallback, useState } from "react";
-import Title from "./components/Title";
-import ShowCount from "./components/ShowCount";
-import Button from "./components/Button";
+import React from 'react';
 
+const App = () => {
+  return (
+    <>
+      <h1>Welcome</h1>
+    </>
+  );
+};
+
+export default App;
+
+
+
+/*
+//useCallback
 export default function App() {
   const [count1, setCount1]= useState(0);
   const[ count2, setCount2]= useState(0);
@@ -26,4 +37,4 @@ export default function App() {
     </div>
   );
 }
-
+*/
