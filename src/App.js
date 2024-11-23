@@ -1,9 +1,10 @@
 import React from 'react';
+import UseReducer from './components/Hooks/UseReducer/index';
 
 const App = () => {
   return (
     <>
-      <h1>Welcome</h1>
+      <UseReducer/>
     </>
   );
 };
