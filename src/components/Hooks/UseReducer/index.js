@@ -5,14 +5,24 @@ const booksData = [
   { id: 2, name: "Padma Nadir Majhi" },
   { id: 3, name: "srikanta" },
 ];
+
+const Modal=()=>{
+
+}
 const UseReducer = () => {
   const [books, setBooks] = useState(booksData);
+  const [isModalOpen, setIsModalOpen]= useState(false);
+  const [modalText, setModalText]= useState('');
   const [bookName, setBookName] = useState("");
 
  const handleSubmit=(e)=>{
    e.preventDefault();
-   alert(bookName);
-  }
+   setBooks((prevState)=>{
+    const newBook= {id:new Date().getTime().toString(), name:bookName};
+    return [...prevState, newBook];
+   });
+  };
+
   return (
     <div>
         <h1>Book List</h1>
@@ -27,6 +37,8 @@ const UseReducer = () => {
         />
     <button type="submit">Add Book</button>
   </form>
+
+  
       {books.map((book) => {
         const { id, name } = book;
         return <li key={id}>{name}</li>;
