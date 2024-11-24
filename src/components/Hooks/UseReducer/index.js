@@ -7,7 +7,10 @@ const booksData=[
 ]
 const UseReducer = () => {
     const [books, setBooks]= useState(booksData);
+    const [bookName, setBookName] = useState('');
 
+
+    <fo
     return (
         <div>
            <h1>Book List</h1>
