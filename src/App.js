@@ -1,5 +1,5 @@
 import React from 'react';
-import UseReducer from './components/Hooks/UseReducer/index';
+import UseReducer from './components/Hooks/UseReducer/Counter';
 
 const App = () => {
   return (
