@@ -6,8 +6,8 @@ const booksData = [
   { id: 3, name: "srikanta" },
 ];
 
-const Modal=()=>{
-
+const Modal=({modalText})=>{
+return <p>{modalText}</p>
 }
 const UseReducer = () => {
   const [books, setBooks] = useState(booksData);
@@ -21,6 +21,8 @@ const UseReducer = () => {
     const newBook= {id:new Date().getTime().toString(), name:bookName};
     return [...prevState, newBook];
    });
+   setIsModalOpen(true);
+   setModalText('book is added');
   };
 
   return (
@@ -38,7 +40,7 @@ const UseReducer = () => {
     <button type="submit">Add Book</button>
   </form>
 
-  
+  {isModalOpen && <Modal modalText={modalText}/>}
       {books.map((book) => {
         const { id, name } = book;
         return <li key={id}>{name}</li>;
