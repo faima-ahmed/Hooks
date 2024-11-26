@@ -1,10 +1,10 @@
 import React from 'react';
-import ComplexCounter from './components/Hooks/UseReducer/ComplexCounter';
+import CounterThree from './components/Hooks/UseReducer/CounterThree';
 
 const App = () => {
   return (
     <>
-      <ComplexCounter/>
+      <CounterThree/>
     </>
   );
 };
