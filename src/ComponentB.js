@@ -6,10 +6,10 @@ const ComponentB = () => {
     return (
         <div>
             <p>Component A</p>
-      <button type="button" onClick={() => dispatch("increment")}>
+      <button type="button" onClick={() => countContext.countDispatch("increment")}>
         Increment
       </button>
-      <button type="button" onClick={() => dispatch("decrement")}>
+      <button type="button" onClick={() => countContext.countDispatch("decrement")}>
         Decrement
       </button>
     </div>
