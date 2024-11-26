@@ -2,6 +2,7 @@ import React from 'react';
 import CounterThree from './components/Hooks/UseReducer/CounterThree';
 
 const App = () => {
+  const [count, dispatch]
   return (
     <>
       <CounterThree/>
