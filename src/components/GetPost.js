@@ -20,6 +20,7 @@ useEffect(()=>{
       setError('There was a problem');
     });
 },[]);
+
     return (
         <div>
             {loading? 'Loading...' : post.title}

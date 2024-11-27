@@ -1,10 +1,10 @@
 import React from 'react';
-import GetPost2 from './GetPost2';
+import GetPost from './components/GetPost';
 
 const App = () => {
     return (
         <div>
-            <GetPost2/>
+            <GetPost/>
         </div>
     );
 };
